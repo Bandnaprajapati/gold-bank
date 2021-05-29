@@ -1,0 +1,163 @@
+@extends('layout.admin.app')
+
+@section('internal_css')
+    
+    
+@endsection
+
+
+@section('content')
+
+  <!-- partial -->
+   <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"></h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="add_purchase_data">purchase</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Create</li>
+                </ol>
+              </nav>
+            </div>
+        <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Add purchase</h4>
+                    <form class="form-sample" action="{{ url('sale_data_update') }}" method="post">
+                      @csrf
+                      <input type="hidden" name="id" value="{{ $result->id }}">
+                      <p class="card-description"> Personal info </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Seller Type</label>
+                            <div class="col-sm-9">
+                               <select class="form-control" name="seller_type">
+                                <option>Select</option>
+                                <option>Direct</option>
+                                <option>Through Bank</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Metal Type</label>
+                            <div class="col-sm-9">
+                               <select class="form-control" name="metal_type">
+                                <option>Select</option>
+                                <option>Gold</option>
+                                <option>Silver</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Gold condition</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" name="gold_condition">
+                                <option>Select</option>
+                                <option>Old</option>
+                                <option>New</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Seller Name</label>
+                            <div class="col-sm-9">
+              <input type="text" name="seller_name" class="form-control" value="{{ $result->seller_name }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Seller Contact No</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="seller_contact" class="form-control" value="{{ $result->seller_contact }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Seller Address</label>
+                             <div class="col-sm-9">
+                              <input type="text" name="seller_address" class="form-control" value="{{ $result->seller_address }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Qty</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="qty"class="form-control" value="{{ $result->qty }}" />
+                            </div>
+                          </div>
+                        </div> 
+                         <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Rate(10g)</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="rate" class="form-control" value="{{ $result->rate }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Given Amount</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="given_amount"class="form-control" value="{{ $result->given_amount }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Remaining Amount</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="remaining_amount" class="form-control" value="{{ $result->remaining_amount }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date</label>
+                            <div class="col-sm-9">
+                              <input type="date" name="date" class="form-control" value="{{ $result->date }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Remark</label>
+                            <div class="col-sm-9">
+                              <input type="text" name="remark" class="form-control" value="{{ $result->remark }}" />
+                            </div>
+                          </div>
+                          <div><center>
+                        <input type="submit" name="submit" value="Update" class="btn btn-inverse-success btn-fw"                          style="border-radius: 22px;">
+                          </center>
+                      </div>
+                     </form>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+           
+@endsection
