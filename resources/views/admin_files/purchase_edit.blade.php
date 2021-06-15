@@ -27,7 +27,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add purchase</h4>
-                    <form class="form-sample" action="{{ url('sale_data_update') }}" method="post">
+                    <form class="form-sample" action="{{ url('purchase_update') }}" method="post">
                       @csrf
                       <input type="hidden" name="id" value="{{ $result->id }}">
                       <p class="card-description"> Personal info </p>

@@ -36,7 +36,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Customer Name</label>
                             <div class="col-sm-9">
-                              <input type="text" name="customer_name"class="form-control" value="{{ $result->customer_name }}" />
+                              <input type="text" name="name"class="form-control" value="{{ $result->name }}" />
                             </div>
                           </div>
                         </div>

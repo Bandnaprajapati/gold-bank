@@ -64,7 +64,7 @@
                       @if(isPermission('delete')) 
                      <td>
                     <button class="btn btn-success btn-sm" style="background:white; border-radius:22px;">
-                    <a href="{{ url('/customer_edit') }}/{{ $value->id }}">
+                    <a href="{{ url('/edite_call_history') }}/{{ $value->id }}">
                     <i class="mdi mdi-pencil-box-outline"></i>
                     </a>
                     </button>

@@ -60,7 +60,7 @@ class MortgageController extends Controller
             
         ];
         DB::table('mortgage_data')->insert($array);
-        return redirect('mortgage_create');
+        return redirect('mortgage_list');
     }
 
     /**

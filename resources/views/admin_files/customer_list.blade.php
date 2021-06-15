@@ -52,11 +52,11 @@
 
                         <tbody>
                           <tr  class="table-success">
-                            <td>{{ $value->id }}</td>
+                            <td>{{ $value->id  }}</td>
                             <td>{{ $value->name }}</td>
                             <td>{{ $value->contact }}</td>
                             <td>{{ $value->email }}</td>
-                            <td>{{ $value->address }}</td>
+                            <td>{{ $value->address   }}</td>
                             <td>{{ $value->city }}</td>
                             <td>{{ $value->state }}</td>
                             

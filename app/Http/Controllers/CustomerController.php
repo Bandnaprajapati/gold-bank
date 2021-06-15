@@ -41,7 +41,7 @@ class CustomerController extends Controller
           $responce['status'] = false;
         $responce['message'] = 'Something went wrong';
        $array = [
-            'customer_name' =>  $request->customer_name,
+            'name' =>  $request->name,
             'contact' => $request->contact,
             'email' => $request->email,
             'address' => $request->address,
@@ -95,7 +95,7 @@ class CustomerController extends Controller
     {
          $id = $request->id;
          $array = [
-            'customer_name' =>  $request->customer_name,
+            'name' =>  $request->name,
             'contact' => $request->contact,
             'email' => $request->email,
             'address' => $request->address,

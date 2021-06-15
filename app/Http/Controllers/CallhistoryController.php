@@ -102,7 +102,7 @@ class CallhistoryController extends Controller
          DB::table('call_history')
             ->where('id',$id)
             ->update($array);
-        return redirect('call_history');
+        return redirect('callhistory_list');
     }
 
     /**

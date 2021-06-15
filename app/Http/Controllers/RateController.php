@@ -40,7 +40,8 @@ class RateController extends Controller
         $array = [
             'item' =>  $request->item,
             'amount' => $request->amount,
-            
+            'status' => $request->status,
+ 
             
         ];
         DB::table('rate')->insert($array);
@@ -66,7 +67,10 @@ class RateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $result = DB::table('rate')
+                ->where('id','=',$id)
+                ->first();
+        return view('admin_files/rate_edite',compact('result'));
     }
 
     /**
@@ -76,9 +80,20 @@ class RateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, )
     {
-        //
+         $id = $request->id;
+         $array = [
+            'item' =>  $request->item,
+            'amount' => $request->amount,
+             'status' => $request->status,
+           
+            
+        ];
+         DB::table('rate')
+            ->where('id',$id)
+            ->update($array);
+        return redirect('rate_list');
     }
 
     /**
@@ -89,6 +104,9 @@ class RateController extends Controller
      */
     public function destroy($id)
     {
-        //
+         DB::table('rate')
+        ->where('id',$id)
+        ->delete();
+        return redirect('rate_list');
     }
 }

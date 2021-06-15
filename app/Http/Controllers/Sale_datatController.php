@@ -62,7 +62,7 @@ class Sale_datatController extends Controller
                ];
                
         DB::table('sale_database')->insert($array);
-        return redirect('add_sale_data');
+        return redirect('sale_list');
        
     }
 

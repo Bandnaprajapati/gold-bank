@@ -70,6 +70,10 @@ Route::post('assingdata_update','AssingController@update');
 Route::get('rate_create','RateController@create');
 Route::post('rate_store','RateController@store');
 Route::get('rate_list','RateController@index');
+Route::get('rate_delete/{id}','RateController@destroy');
+Route::get('rate_edite/{id}','RateController@edit');
+Route::post('rate_update','RateController@update');
+
 Route::get('add_purchase_data','PurchaseController@index');
 Route::get('purchase_list','PurchaseController@index');
 Route::get('purchase_create','PurchaseController@create');

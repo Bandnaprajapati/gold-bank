@@ -29,7 +29,7 @@
 										<h4 class="card-title">Customer Call History</h4>
 										<form class="form-sample" action="{{ url('history_update') }}" method="post">
 											@csrf
-											
+											<input type="hidden" name="id" value="{{ $result->id }}">
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group row">
